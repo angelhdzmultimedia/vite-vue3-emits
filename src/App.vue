@@ -9,7 +9,7 @@ export default defineComponent({
 
   setup() {
     function onCountChange(count) {
-      alert(`[COUNT]: ${count}`);
+      alert(`[Event]: change = ${count}`);
     }
 
     return {
@@ -20,19 +20,10 @@ export default defineComponent({
 </script>
 
 <template>
-  <Counter @change="onCountChange" />
+  <div class="column items-center">
+    <h1 class="color-primary">Counter</h1>
+    <Counter @change="onCountChange" />
+  </div>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+<style scoped></style>

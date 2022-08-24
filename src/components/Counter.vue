@@ -26,10 +26,19 @@ export default defineComponent({
 </script>
 
 <template>
-  <div>
-    <h1>Counter</h1>
-    <button @click="decrease">-</button>
-    <span>{{ count }}</span>
-    <button @click="increase">+</button>
+  <div class="row items-center gap-md">
+    <button
+      class="cursor-pointer borderless rounded pa-md bg-primary color-white"
+      @click="decrease"
+    >
+      -
+    </button>
+    <h3 class="color-primary">{{ count }}</h3>
+    <button
+      class="cursor-pointer borderless rounded pa-md bg-primary color-white"
+      @click="increase"
+    >
+      +
+    </button>
   </div>
 </template>
